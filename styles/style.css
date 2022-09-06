@@ -1,13 +1,21 @@
 html {
   font-size: 10px;
 }
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Inter", sans-serif;
+  color: #667085;
   font-size: 1.6rem;
   font-weight: 400;
-  color: #667085;
-  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 5%;
   margin: 0 auto;
 }
 
@@ -15,7 +23,6 @@ header,
 main {
   max-width: 1216px;
   font-size: 1.6rem;
-  padding: 0 7.5%;
   margin: 0 auto;
 }
 
@@ -24,28 +31,29 @@ footer {
   background-color: #f9fafb;
 }
 
-nav {
-  padding: 2rem 0;
+.header-nav {
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 500;
+  padding: 2rem 0;
+  margin-bottom: 9.6rem;
 }
 
-.logo {
+.header-logo {
   font-size: 1.8rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
 
-.header-links {
-  color: #667085;
-  padding-right: 3.2rem;
+.header-pages {
+  display: flex;
+  gap: 3.2rem;
 }
 
-.header-links:last-child {
-  padding-right: 0;
+.header-links {
+  color: #667085;
 }
 
 .logo-blank {
@@ -55,7 +63,7 @@ nav {
 .header-action {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  gap: 3rem;
 }
 
 .login {
@@ -63,27 +71,31 @@ nav {
 }
 
 .btn {
-  font-size: 1.6rem;
   height: 4rem;
   color: #fff;
+  font-size: 1.6rem;
   background-color: #8e2424;
-  padding: 0 1.8rem;
   border: 1px solid #8e2424;
-  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   border-radius: 0.8rem;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  padding: 0 1.8rem;
   cursor: pointer;
 }
 
-.about-us {
-  width: 75%;
-  margin: 10rem auto;
+.box-section {
+  width: 100%;
   text-align: center;
+  margin: 0 auto 9.6rem auto;
 }
 
-.about-us span {
+.about-us {
+  padding: 0 17%;
+}
+
+.highlight-header {
   color: #8e2424;
-  font-weight: 600;
   line-height: 2.4rem;
+  font-weight: 600;
 }
 
 h1 {
@@ -95,10 +107,9 @@ h1 {
   margin-bottom: 3.6rem;
 }
 
-.undertitle-text {
+.section-text {
   font-size: 2rem;
   line-height: 3rem;
-  margin-bottom: 1rem;
 }
 
 .metrics {
@@ -106,7 +117,6 @@ h1 {
   justify-content: space-between;
   align-items: flex-start;
   gap: 3.2rem;
-  padding-bottom: 9.6rem;
 }
 
 .metric {
@@ -115,8 +125,8 @@ h1 {
 
 .metric-number {
   color: #8e2424;
-  font-weight: 600;
   font-size: 6rem;
+  font-weight: 600;
   line-height: 7.2rem;
   margin-bottom: 1.2rem;
 }
@@ -134,19 +144,21 @@ h1 {
   line-height: 2.4rem;
 }
 
+.vacancies {
+  padding-top: 9.6rem;
+}
+
 .vacancies-header {
-  width: 75%;
-  margin: 10rem auto 6.4rem auto;
-  text-align: center;
+  margin-bottom: 6.4rem;
 }
 
 .text-section-header {
+  color: #8e2424;
   font-weight: 500;
   line-height: 2rem;
-  color: #8e2424;
   background-color: rgba(142, 36, 36, 0.1);
   border-radius: 1.6rem;
-  padding: 0.4rem 1.2rem;
+  padding: 0.5rem 1.6rem;
 }
 
 h2 {
@@ -158,12 +170,24 @@ h2 {
   margin-bottom: 2rem;
 }
 
-.vacancies img {
+.section-image {
   width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 6.4rem;
 }
 
 .vacancies-body {
+  text-align: left;
   padding: 0 22%;
+}
+
+.department-jobs {
+  margin-bottom: 6.4rem;
+}
+
+.department-jobs:last-child {
+  margin-bottom: 0rem;
 }
 
 .department-name {
@@ -172,7 +196,6 @@ h2 {
   font-weight: 500;
   line-height: 3rem;
   margin-bottom: 0.8rem;
-  margin-top: 6.4rem;
 }
 
 .job {
@@ -195,11 +218,9 @@ h2 {
 }
 
 .testimonies {
-  text-align: center;
   background-color: rgba(196, 25, 25, 0.1);
   border-radius: 1.6rem;
   padding: 6.4rem;
-  margin: 9.6rem 0;
 }
 
 .testimonies-header {
@@ -243,12 +264,11 @@ h2 {
 }
 
 .subscribe {
-  text-align: center;
-  padding-top: 9.6rem;
-  padding-bottom: 9.6rem;
+  padding: 9.6rem;
+  margin-bottom: 0;
 }
 
-form {
+.email-registration {
   margin-top: 4rem;
   margin-bottom: 3.2rem;
   display: flex;
@@ -258,7 +278,8 @@ form {
 }
 
 #input-email {
-  width: 30%;
+  width: 50%;
+  max-width: 340px;
   height: 4rem;
   font-size: 1.6rem;
   font-weight: 400;
@@ -278,15 +299,6 @@ form {
   .logo-blank {
     display: none;
   }
-
-  header,
-  main {
-    padding: 0 5%;
-  }
-
-  #input-email {
-    width: 40%;
-  }
 }
 
 @media (max-device-width: 769px) {
@@ -294,56 +306,73 @@ form {
     font-size: 8px;
   }
 
-  header,
-  main {
+  .container {
     padding: 0 3%;
   }
 
   .header-links:first-child {
     display: none;
   }
+
+  .about-us {
+    padding: 0 10%;
+  }
+
+  .section-image {
+    height: 260px;
+  }
+
+  .subscribe {
+    padding: 9.6rem 10%;
+  }
 }
 
-@media (max-device-width: 570px) {
+@media (max-device-width: 590px) {
   html {
     font-size: 8px;
   }
 
-  header {
-    padding: 0 5%;
-  }
-
-  main {
+  .container {
     padding: 0;
-  }
-
-  .about-us {
-    width: 90%;
-  }
-
-  .metrics {
-    padding: 0 10%;
-    flex-wrap: wrap;
-    gap: 20%;
-  }
-
-  .vacancies-body {
-    padding: 0 10%;
   }
 
   .header-pages {
     display: none;
   }
 
-  h2 {
-    padding: 0 2%;
+  header {
+    padding: 0 5%;
   }
 
-  .undertitle-text {
-    padding: 0 2%;
+  .box-section {
+    width: 100%;
   }
 
-  form {
+  .about-us {
+    padding: 0 5%;
+  }
+
+  .subscribe {
+    padding: 9.6rem 5%;
+  }
+
+  .metrics {
+    padding: 0 10%;
+    flex-wrap: wrap;
+    gap: 20%;
+    margin-bottom: 3rem;
+  }
+
+  .vacancies-body {
+    padding: 0 10%;
+  }
+
+  .testimonies {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .email-registration {
     flex-direction: column;
   }
 
@@ -356,6 +385,7 @@ form {
   .metrics {
     flex-direction: column;
     gap: 2.4rem;
+    padding: 0 22%;
   }
 
   .metric {
